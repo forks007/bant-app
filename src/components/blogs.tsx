@@ -3,7 +3,7 @@ import SectionContainer from "./section-container";
 
 const Blogs = () => {
   return (
-    <SectionContainer>
+    <SectionContainer parentClass="my-10">
       <div className="flex h-96">
         <div className="w-full h-full flex flex-col gap-4">
           <h1 className="text-2xl font-bold uppercase text-gray-800">

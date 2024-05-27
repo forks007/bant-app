@@ -27,7 +27,7 @@ const Header = () => {
               <Link href={"/about-us"}>celebrate our story</Link>
             </div>
             <div className="capitalize hover:cursor-pointer text-gray-800 hover:text-black p-4">
-              executive members
+              <Link href={"/about-us"}>executive members</Link>
             </div>
             <div className="capitalize hover:cursor-pointer text-gray-800 hover:text-black p-4">
               youth empowerment

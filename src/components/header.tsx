@@ -5,7 +5,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <>
-      <SectionContainer parentClass="bg-[#F0FBF7] py-2 border-b-2 border-[#F1FDF9]">
+      <SectionContainer parentClass="bg-[#F0FBF7] py-2 border-b-2 border-[#F1FDF9] ">
         <div className="flex justify-end gap-4 text-sm ">
           <div>Sign in</div>
           <div>Sign up</div>
@@ -21,7 +21,8 @@ const Header = () => {
               objectFit="contain"
             />
           </div>
-          <nav className="flex justify-between gap-4">
+          {/* <div className="">Menu</div> */}
+          <nav className=" flex justify-between gap-4">
             <div className="capitalize hover:cursor-pointer text-gray-800 hover:text-black p-4">
               <Link href={"/about-us"}>celebrate our story</Link>
             </div>

@@ -24,7 +24,7 @@ const Header = () => {
           {/* <div className="">Menu</div> */}
           <nav className=" flex justify-between gap-4">
             <div className="capitalize hover:cursor-pointer text-gray-800 hover:text-black p-4">
-              <Link href={"/about-us"}>celebrate our story</Link>
+              <Link href={"/our-stories"}>celebrate our story</Link>
             </div>
             <div className="capitalize hover:cursor-pointer text-gray-800 hover:text-black p-4">
               <Link href={"/about-us"}>executive members</Link>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 export interface IEventCardProps {
@@ -43,9 +44,11 @@ const EventCard: FC<IEventCardProps> = ({
           {countdown}
         </div>
         <div className="flex gap-8 ">
-          <button className="border-[#006A51] text-[#006A51] border-2 px-4 py-2 capitalize rounded-md text-sm">
-            Read More
-          </button>
+          <Link href={"events/eventId"}>
+            <button className="border-[#006A51] text-[#006A51] border-2 px-4 py-2 capitalize rounded-md text-sm">
+              Read More
+            </button>
+          </Link>
           <button className="border-[#006A51] text-[#006A51] border-2 px-4 py-2 capitalize rounded-md text-sm">
             Sponsor Event
           </button>

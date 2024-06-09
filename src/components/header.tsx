@@ -30,9 +30,11 @@ const Header = () => {
               <Link href={"/events"}>upcoming celebrations</Link>
             </div>
           </nav>
-          <button className="bg-[#006A51] px-4 py-2 text-white capitalize rounded-md text-sm">
-            Join the bant community
-          </button>
+          <Link href={"/join-form"}>
+            <button className="bg-[#006A51] px-4 py-2 text-white capitalize rounded-md text-sm">
+              Join the bant community
+            </button>
+          </Link>
         </div>
       </SectionContainer>
     </>

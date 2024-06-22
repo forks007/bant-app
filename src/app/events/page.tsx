@@ -1,3 +1,5 @@
+"use client";
+
 import EventsList from "@/components/events-list";
 import Footer from "@/components/footer";
 import Header from "@/components/header";

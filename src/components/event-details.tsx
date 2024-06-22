@@ -1,8 +1,11 @@
 import Image from "next/image";
 import EventCard, { IEventCardProps } from "./event-card";
 import SectionContainer from "./section-container";
+import TicketModal from "./ticket-modal";
+import { useState } from "react";
 
 const EventDetails = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <SectionContainer parentClass="my-8">
       <div className="shadow-lg p-8">
@@ -11,13 +14,21 @@ const EventDetails = () => {
           aperiam.
         </h1>
         <div className=" grid grid-cols-3 p-8">
-          <div className="relative w-full aspect-square ">
-            <Image
-              src={`https://source.unsplash.com/i5Kx0P8A0d4`}
-              alt="alter"
-              fill
-              objectFit="cover"
-            />
+          <div className="w-full">
+            <div className="relative w-full aspect-square ">
+              <Image
+                src={`https://source.unsplash.com/i5Kx0P8A0d4`}
+                alt="alter"
+                fill
+                objectFit="cover"
+              />
+            </div>
+            <button
+              type="submit"
+              className=" hover:text-white bg-gray-100 hover:bg-[#006A51] focus:ring-4 focus:outline-none text-sm w-full  px-5 py-2.5 text-center  focus:ring-[#006A51] font-bold"
+            >
+              See Gallery
+            </button>
           </div>
           <div className="divide-y-2 col-span-2 p-8">
             <div className="">
@@ -34,9 +45,13 @@ const EventDetails = () => {
               </div>
             </div>
             <div className=" py-8">
-              <button className="border-[#006A51] text-[#006A51] border-2 px-4 py-2 capitalize rounded-md text-sm">
-                Sponsor Event
+              <button
+                onClick={() => setShowModal(true)}
+                className="border-[#006A51] text-[#006A51] border-2 px-4 py-2 capitalize rounded-md text-sm"
+              >
+                Buy Ticket
               </button>
+              <TicketModal show={showModal} setShow={setShowModal} />
             </div>
             <div className="py-8">
               <h1 className="text-lg font-bold uppercase">About event</h1>

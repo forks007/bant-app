@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useState } from "react";
+import TicketModal from "./ticket-modal";
 
 export interface IEventCardProps {
   image: string;
@@ -19,6 +20,7 @@ const EventCard: FC<IEventCardProps> = ({
   name,
   time,
 }) => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="w-full grid grid-cols-3  p-8 gap-4">
       <div className="relative w-full aspect-square">
@@ -49,9 +51,13 @@ const EventCard: FC<IEventCardProps> = ({
               Read More
             </button>
           </Link>
-          <button className="border-[#006A51] text-[#006A51] border-2 px-4 py-2 capitalize rounded-md text-sm">
-            Sponsor Event
+          <button
+            onClick={() => setShowModal(true)}
+            className="border-[#006A51] text-[#006A51] border-2 px-4 py-2 capitalize rounded-md text-sm"
+          >
+            Buy Ticket
           </button>
+          <TicketModal show={showModal} setShow={setShowModal} />
         </div>
       </div>
     </div>

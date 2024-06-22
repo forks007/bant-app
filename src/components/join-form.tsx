@@ -4,7 +4,7 @@ const RegisterForm = () => {
       <h3 className="mb-5 text-4xl font-extrabold text-[#006A51]  ">Join Us</h3>
       <ul className="grid w-full md:grid-cols-3">
         {["member", "sponsor", "partner"].map((role) => (
-          <li>
+          <li key={role}>
             <input
               type="radio"
               id={role}

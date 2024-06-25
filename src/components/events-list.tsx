@@ -71,11 +71,11 @@ const options = {
     inputIcon: "",
     selected: "",
   },
-  icons: {
-    // () => ReactElement | JSX.Element
-    // prev: () => <span>{}</span>,
-    // next: () => <span>Next</span>,
-  },
+  // icons: {
+  //   // () => ReactElement | JSX.Element
+  //   prev: () =>,
+  //   next: () => ,
+  // },
   datepickerClassNames: "top-12",
   // defaultDate: new Date("2024-07-01"),
   language: "en",
@@ -84,11 +84,11 @@ const options = {
   inputNameProp: "date",
   inputIdProp: "date",
   inputPlaceholderProp: "Select Date",
-  inputDateFormatProp: {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  },
+  // inputDateFormatProp: {
+  //   day: "numeric",
+  //   month: "long",
+  //   year: "numeric",
+  // },
 };
 const EventsList = () => {
   const [show, setShow] = useState<boolean>(false);

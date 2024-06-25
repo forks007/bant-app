@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 import SectionContainer from "./section-container";
+import Link from "next/link";
 
 const data = [
   {
@@ -47,20 +48,22 @@ interface ICardProps {
 
 const MembersCard: FC<ICardProps> = ({ designation, name }) => {
   return (
-    <div className=" shadow-[rgba(99, 99, 99, 0.2)_0px_2px_8px_0px]  overflow-hidden w-full">
-      <div className="relative w-full aspect-square">
-        <Image
-          src={"https://source.unsplash.com/2LowviVHZ-E"}
-          alt="hello"
-          fill
-          objectFit="cover"
-        />
+    <Link href={"/about-us/:id"}>
+      <div className=" shadow-[rgba(99, 99, 99, 0.2)_0px_2px_8px_0px]  overflow-hidden w-full">
+        <div className="relative w-full aspect-square">
+          <Image
+            src={"https://source.unsplash.com/2LowviVHZ-E"}
+            alt="hello"
+            fill
+            objectFit="cover"
+          />
+        </div>
+        <div className="p-4 space-y-2 bg-[#F0FBF7] text-center">
+          <div className="font-black uppercase">Abdur Rahman</div>
+          <div className="text-gray-700 text-sm">Director</div>
+        </div>
       </div>
-      <div className="p-4 space-y-2 bg-[#F0FBF7] text-center">
-        <div className="font-black uppercase">Abdur Rahman</div>
-        <div className="text-gray-700 text-sm">Director</div>
-      </div>
-    </div>
+    </Link>
   );
 };
 
